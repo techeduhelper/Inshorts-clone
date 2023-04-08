@@ -6,9 +6,15 @@ import Datacontainer from './Datacontainer';
 
 
 
-const ConBox =styled(Box)`
-    margin: 15px 20% 0 20%;
-`
+const ConBox =styled(Box)(({theme}) =>({
+    margin: '15px 20% 0 20%',
+    [theme.breakpoints.down('md')]:{
+      margin: '25px'
+    },
+    [theme.breakpoints.between('sm')]:{
+      margin: '10px'
+    }
+}));
 const Article = () => {
 
 

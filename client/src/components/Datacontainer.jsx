@@ -21,21 +21,24 @@ const FlexGrid = styled(Grid)`
 
 const Datacontainer = ({data}) => {
   return (
-    <Card>
-        <CardContent>
+    <Card style={{marginTop: '20px', boxShadow:'box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;'}}>
+        <CardContent style={{padding:'0.7rem'}}>
                 <Grid container>
                     <Grid item lg={5} sm ={5} xs={12}>
                         <Image src={data.url} alt="new_image" />
                     </Grid>
                     <FlexGrid item lg={7} sm ={7} md={7} xs={12}>
-                        <Typography>
+                        <Typography style={{fontSize: '1.5rem', fontWeight:'700'}}>
                             {data.title}
                         </Typography>
-                        <Typography>
+                        <Typography style={{fontSize:'0.8rem'}}>
+                            <b>Short</b> by {data.author} / {new Date(data.timestamp).toDateString()}
+                        </Typography>
+                        <Typography style={{textAlign:'justify'}}>
                             {data.description}
                         </Typography>
                         <Typography>
-                            {data.timestamp}
+                            read more at <a style={{textDecoration: 'none',fontWeight: 'bold'}} href={data.link} target='_blank'>{data.publisher}</a>
                         </Typography>
                     </FlexGrid>
                 </Grid>
