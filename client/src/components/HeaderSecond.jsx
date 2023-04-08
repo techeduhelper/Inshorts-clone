@@ -40,4 +40,4 @@ const HeaderSecond = () => {
   )
 }
 
-export default HeaderSecond
+export default HeaderSecond;
