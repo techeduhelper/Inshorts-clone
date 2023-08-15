@@ -2,11 +2,15 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client-install": "cd client && npm install",
+    "client-build":"cd client && npm run build",
+    "heroku-postbuild": "npm run client-install && npm run client-build"
+
   },
   "author": "maniruddin khan",
   "license": "ISC",

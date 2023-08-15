@@ -1,7 +1,4 @@
 
-
-
-
 export const data = [
     {
         title: 'Man stabs TN Police sub-inspector over month-old fine for drunk driving',
